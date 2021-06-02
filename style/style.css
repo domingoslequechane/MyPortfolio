@@ -137,12 +137,14 @@ section {
 }
 .about,
 .services,
-.skills {
+.skills,
+.tools {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
-.skills .skills-content {
+.skills .skills-content,
+.tools .tools-content  {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -276,22 +278,27 @@ section .title::after{
     background: crimson;
 }
 
-/* Skills section styling */
-.skills .title::after {
+/* Skills and Tools section styling */
+.skills .title::after,
+.tools .title::after {
     content: "O que domíno?";
 }
-.skills .skills-content .column {
+.skills .skills-content .column,
+.tools .tools-content .column {
     width: calc(50% - 30px);
 }
-.skills .skills-content .left .text {
+.skills .skills-content .left .text,
+.tools .tools-content .left .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.skills .skills-content .left p {
+.skills .skills-content .left p,
+.tools .tools-content .left p {
     text-align: justify;
 }
-.skills .skills-content .left a {
+.skills .skills-content .left a,
+.tools .tools-content .left a {
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -304,32 +311,38 @@ section .title::after{
     margin-top: 20px;
     /* margin: 40px auto; */
 }
-.skills .skills-content .left a:hover {
+.skills .skills-content .left a:hover,
+.tools .tools-content .left a:hover {
     color: crimson;
     background: none;
 }
-.skills .skills-content .right .bars {
+.skills .skills-content .right .bars,
+.tools .tools-content .right .bars {
     margin-bottom: 15px;
 }
-.skills .skills-content .right .info {
+.skills .skills-content .right .info,
+.tools .tools-content .right .info {
     display: flex;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
 
 }
-.skills .skills-content .right span {
+.skills .skills-content .right span,
+.tools .tools-content .right span {
     font-weight: 500;
     font-size: 18px;
 }
-.skills .skills-content .right .line {
+.skills .skills-content .right .line,
+.tools .tools-content .right .line {
     height: 5px;
     width: 100%;
     background: lightgrey;
     position: relative;
 }
 /* level bar */
-.skills .skills-content .right .line::before {
+.skills .skills-content .right .line::before,
+.tools .tools-content .right .line::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -356,11 +369,34 @@ section .title::after{
 .skills .skills-content .right .csharp::before {
     width: 65%;
 }
-.skills .skills-content .right .java::before {
-    width: 50%;
-}
 .skills .skills-content .right .mysql::before {
-    width: 65%;
+    width: 60%;
+}
+.services {
+    background: #111;
+    color: #fff;
+}
+
+/* Onli Tools session styling */
+.tools .title::after {
+    content: "O que domíno?";
+    background: #111;
+}
+.tools .title::before {
+    background: #fff;
+}
+.tools {
+    background: #111;
+    color: #fff;
+}
+.tools .tools-content .right .ai::before {
+    width: 80%;
+}
+.tools .tools-content .right .ps::before {
+    width: 60%;
+}
+.tools .tools-content .right .xd::before {
+    width: 75%;
 }
 
 
@@ -388,7 +424,7 @@ section .title::after{
         font-size: 37px;
     }
 }
-@media (max-width: 990px){
+@media (max-width: 1080px){
     .max-width {
         padding: 0 50px;
     }
@@ -457,7 +493,8 @@ section .title::after{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column {
+    .skills .skills-content .column,
+    .tools .tools-content .column {
         width: 100%;
         margin-bottom: 35px;
     }
