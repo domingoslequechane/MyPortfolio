@@ -138,7 +138,8 @@ section {
 .about,
 .services,
 .skills,
-.tools {
+.tools,
+.projects {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -185,7 +186,7 @@ section .title::after{
 
 /* About section styling */
 .about .title::after{
-    content: "Quem eu sou?";
+    content: "Quem eu sou";
 }
 .about .about-content .left {
     width: 45%;
@@ -229,7 +230,7 @@ section .title::after{
 }
 
 /* Services section styling */
-.services {
+.services .projects {
     background: #111;
     color: #fff;
 }
@@ -258,10 +259,11 @@ section .title::after{
 .services .serv-content .card i {
     font-size: 50px;
     color: crimson;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 .services .serv-content .card:hover i {
     color: #fff;
+    transition: all 0.2s ease;
 }
 .services .serv-content .card .text {
     font-size: 25px;
@@ -273,15 +275,17 @@ section .title::after{
 }
 .services .serv-content .card:hover .box {
     transform: scale(1.05);
+    transition: color 0.2s ease;
 }
 .services .serv-content .card:hover {
     background: crimson;
+    transition: all 0.2s ease;
 }
 
 /* Skills and Tools section styling */
 .skills .title::after,
 .tools .title::after {
-    content: "O que domíno?";
+    content: "O que domíno";
 }
 .skills .skills-content .column,
 .tools .tools-content .column {
@@ -377,9 +381,12 @@ section .title::after{
     color: #fff;
 }
 
-/* Onli Tools session styling */
+/* Only Tools session styling */
+.tools-content {
+    margin-bottom: 80px;
+}
 .tools .title::after {
-    content: "O que domíno?";
+    content: "O que domíno";
     background: #111;
 }
 .tools .title::before {
@@ -398,6 +405,80 @@ section .title::after{
 .tools .tools-content .right .xd::before {
     width: 75%;
 }
+
+/* Projects section styling */
+.projects .title::after {
+    content: "Soluçoes finais";
+}
+.projects .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.2s ease;
+    color: #fff;
+}
+.projects .carousel a {
+    color: #fff;
+    font-weight: 600;
+}
+.projects .carousel .card:hover {
+    background: crimson;
+    transition: all 0.2s ease;
+}
+.projects .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projects .carousel .card:hover .box {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+.projects .carousel .card .text {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 7%;
+    border: 7px solid crimson;
+    transition: all 0.2s ease;
+}
+.projects .carousel .card:hover img {
+    background-color: #fff;
+    height: 175px;
+    width: 175px;
+    border-color: #fff;
+    transition: all 0.2s ease;
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot {
+    height: 13px;
+    width: 14px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 7%;
+    border: 2px solid crimson!important;
+    transition: all 0.2s ease;
+}
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson!important;
+}
+
+
 
 
 
