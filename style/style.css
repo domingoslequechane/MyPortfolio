@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Navegation styling */
 .navbar {
     position: fixed;
@@ -49,6 +53,7 @@
     display: inline-block;
 }
 .navbar .menu li a {
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -68,6 +73,31 @@
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+
+/* Scroll-up btn styling */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Home section styling */
@@ -139,13 +169,16 @@ section {
 .services,
 .skills,
 .tools,
-.projects {
+.projects,
+.contact,
+footer {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.tools .tools-content  {
+.tools .tools-content,
+.contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -302,7 +335,8 @@ section .title::after{
     text-align: justify;
 }
 .skills .skills-content .left a,
-.tools .tools-content .left a {
+.tools .tools-content .left a,
+.projects .more a {
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -316,7 +350,8 @@ section .title::after{
     /* margin: 40px auto; */
 }
 .skills .skills-content .left a:hover,
-.tools .tools-content .left a:hover {
+.tools .tools-content .left a:hover,
+.projects .more a:hover {
     color: crimson;
     background: none;
 }
@@ -410,6 +445,10 @@ section .title::after{
 .projects .title::after {
     content: "Soluçoes finais";
 }
+.projects .carousel .card .box {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 .projects .carousel .card {
     background: #222;
     border-radius: 6px;
@@ -417,6 +456,7 @@ section .title::after{
     text-align: center;
     transition: all 0.2s ease;
     color: #fff;
+    margin-bottom: 30px;
 }
 .projects .carousel a {
     color: #fff;
@@ -477,6 +517,110 @@ section .title::after{
 .owl-dot:hover {
     background: crimson!important;
 }
+
+/* Contact sectiom styling */
+.contact .title::after {
+    content: "Como me achar";
+}
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+    text-align: justify;
+}
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+.contact .contact-content .info i {
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+.contact .contact-content .row .sub-title {
+    color: #333;
+}
+.contact .right form .fields {
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea {
+    height: 150px;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button {
+    height: 47px;
+    width: 100%;
+}
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.contact .right form .button button:hover {
+    color: crimson;
+    background: none;
+    transition: all 0.2s ease;
+}
+
+/* Footer section styling */
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}
+
 
 
 
@@ -575,7 +719,8 @@ section .title::after{
         margin-bottom: 20px;
     }
     .skills .skills-content .column,
-    .tools .tools-content .column {
+    .tools .tools-content .column,
+    .contact .contact-content .column {
         width: 100%;
         margin-bottom: 35px;
     }
