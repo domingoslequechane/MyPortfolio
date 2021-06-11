@@ -236,12 +236,19 @@ section .title::after{
 .about .about-content .right .text {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 .about .about-content .right .text span {
     color: crimson;
 }
+.about .about-content .right .text2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.about .about-content .right .text2 span {
+    color: crimson;
+}
 .about .about-content .right p {
+    margin-top: 12px;
     text-align: justify;
 }
 .about .about-content .right a {
@@ -280,7 +287,6 @@ section .title::after{
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
-    cursor: pointer;
     transition: all 0.2s ease;
 }
 .services .serv-content {
@@ -288,6 +294,7 @@ section .title::after{
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 50px;
+    margin-bottom: 150px;
 }
 .services .serv-content .card i {
     font-size: 50px;
@@ -309,6 +316,9 @@ section .title::after{
 .services .serv-content .card:hover .box {
     transform: scale(1.05);
     transition: color 0.2s ease;
+}
+.services .serv-content .card .box summary:hover {
+    cursor: pointer;
 }
 .services .serv-content .card:hover {
     background: crimson;
@@ -539,7 +549,7 @@ section .title::after{
     align-items: center;
 }
 .contact .contact-content .row .info {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 .contact .contact-content .info i {
     font-size: 25px;
@@ -620,10 +630,6 @@ footer span a {
 footer span a:hover {
     text-decoration: underline;
 }
-
-
-
-
 
 
 
